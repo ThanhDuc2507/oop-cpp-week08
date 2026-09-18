@@ -1,13 +1,22 @@
 #include <iostream>
 using namespace std;
 
+// Hàm hoán đổi hai số sử dụng tham chiếu
+void swapValues(int& x, int& y) {
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
 int main() {
-    int x = 10;
-    int& rx = x; // Tham chiếu rx trỏ đến x
-    rx = 20;     // Thay đổi giá trị qua tham chiếu
-
-    cout << "x = " << x << endl;   // Kết quả: 20
-    cout << "rx = " << rx << endl; // Kết quả: 20
-
+    int a = 5, b = 10;
+    
+    cout << "Before: a = " << a << ", b = " << b << endl;
+    
+    // Gọi hàm hoán đổi
+    swapValues(a, b);
+    
+    cout << "After: a = " << a << ", b = " << b << endl;
+    
     return 0;
 }
