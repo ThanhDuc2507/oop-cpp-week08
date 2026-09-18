@@ -1,26 +1,13 @@
 #include <iostream>
-#include <string>
-
 using namespace std;
 
 int main() {
-    string sentence;
-    cout << "Enter a sentence: ";
-    getline(cin, sentence);
+    int x = 10;
+    int& rx = x; // Tham chiếu rx trỏ đến x
+    rx = 20;     // Thay đổi giá trị qua tham chiếu
 
-    cout << "Length of the sentence: " << sentence.length() << endl;
-
-    size_t pos = sentence.find("C++");
-
-    if (pos != string::npos) {
-        cout << "Found \"C++\" at position: " << pos << endl;
-        cout << "Extracted word: " << sentence.substr(pos, 3) << endl;
-
-        sentence.replace(pos, 3, "Programming");
-        cout << "New sentence: " << sentence << endl;
-    } else {
-        cout << "The word \"C++\" was not found in the sentence." << endl;
-    }
+    cout << "x = " << x << endl;   // Kết quả: 20
+    cout << "rx = " << rx << endl; // Kết quả: 20
 
     return 0;
 }
