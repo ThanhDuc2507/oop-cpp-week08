@@ -2,13 +2,16 @@
 #include <string>
 using namespace std;
 
-void changeFirstChar(string& str) {
-    str[0] = 'J';
-}
-
 int main() {
-    string name = "python";
-    changeFirstChar(name);
-    cout << name << endl;
+    string s = "Hello";
+    string r = s;
+    string& ref = s;
+    
+    r += "!!!";
+    ref += "???";
+    
+    cout << "s: " << s << endl;
+    cout << "r: " << r << endl;
+    cout << "ref: " << ref << endl;
     return 0;
 }
