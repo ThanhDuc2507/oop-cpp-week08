@@ -1,18 +1,20 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-void setLastToTen(int& x) {
-    x = 10;
+void insertSubarray(vector<int>& arr, const vector<int>& sub, int index) {
+    arr.insert(arr.begin() + index, sub.begin(), sub.end());
 }
 
 int main() {
-    int nums[4] = {3, 5, 7, 9};
-    setLastToTen(nums[3]);
-    
-    for (int i = 0; i < 4; ++i) {
-        cout << nums[i] << " ";
+    vector<int> nums = {1, 2, 3, 4, 5};
+    vector<int> sub = {9, 9};
+    int pos = 2;
+
+    insertSubarray(nums, sub, pos);
+
+    for (int x : nums) {
+        cout << x << " ";
     }
-    cout << endl;
-    
     return 0;
 }
