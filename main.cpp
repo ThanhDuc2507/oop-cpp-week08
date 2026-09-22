@@ -2,10 +2,9 @@
 using namespace std;
 
 int main() {
-    int x = 3;
-    int& y = x;
-    x = 7;
-    y = 2;
-    cout << x << " " << y << endl;
+    int n = 7;
+    int& r = n;
+    r = 15;
+    cout << n << " " << r << endl;
     return 0;
 }
