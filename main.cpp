@@ -3,19 +3,11 @@
 using namespace std;
 
 int main() {
-    string text = "Hello C++";
+    string text = "I like Java";
 
-    int countAll = text.length();
-    int countWithoutSpaces = 0;
+    text.replace(7, 4, "C++");
 
-    for (char c : text) {
-        if (c != ' ') {
-            countWithoutSpaces++;
-        }
-    }
-
-    cout << countAll << endl;
-    cout << countWithoutSpaces << endl;
+    cout << text << endl;
 
     return 0;
 }
