@@ -3,18 +3,28 @@
 using namespace std;
 
 int main() {
-    string sentence, word;
+    string name;
+    int year;
 
-    getline(cin, sentence);
-    getline(cin, word);
+    getline(cin, name);
+    cin >> year;
 
-    size_t pos = sentence.find(word);
+    string username = name;
 
-    if (pos != string::npos) {
-        cout << "The word \"" << word << "\" is found at position " << pos << "." << endl;
-    } else {
-        cout << "The word \"" << word << "\" is not found." << endl;
+    for (int i = 0; i < username.length(); i++) {
+        if (username[i] == ' ') {
+            username.erase(i, 1);
+            i--;
+        }
     }
+
+    for (int i = 0; i < username.length(); i++) {
+        username[i] = tolower(username[i]);
+    }
+
+    username += to_string(year);
+
+    cout << "Username: " << username << endl;
 
     return 0;
 }
