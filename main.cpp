@@ -3,13 +3,11 @@
 using namespace std;
 
 int main() {
-    string s = "Hello World";
+    string s = "Hello";
 
-    string part1 = s.substr(0, 5);
-    string part2 = s.substr(6, 5);
+    s.append(" C++");
 
-    cout << part1 << endl;
-    cout << part2 << endl;
+    cout << s << endl;
 
     return 0;
 }
