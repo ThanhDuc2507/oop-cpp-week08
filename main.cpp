@@ -3,11 +3,14 @@
 using namespace std;
 
 int main() {
-    string s1 = "";
-    string s2 = "Hi";
+    string text = "I love C++";
+    size_t pos = text.find("C++");
 
-    cout << s1.empty() << endl;
-    cout << s2.empty() << endl;
+    if (pos != string::npos) {
+        cout << "Found at: " << pos << endl;
+    } else {
+        cout << "Not found" << endl;
+    }
 
     return 0;
 }
