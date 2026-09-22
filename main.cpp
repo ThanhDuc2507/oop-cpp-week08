@@ -3,12 +3,16 @@
 using namespace std;
 
 int main() {
-    string s = "Hello World!";
-    string insertText = "C++ ";
+    string text = "I love C++ programming";
+    string sub = "C++";
 
-    s.insert(6, insertText);
+    size_t pos = text.find(sub);
 
-    cout << s << endl;
+    if (pos != string::npos) {
+        cout << "Position: " << pos << endl;
+    } else {
+        cout << "Not found" << endl;
+    }
 
     return 0;
 }
