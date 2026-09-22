@@ -3,11 +3,12 @@
 using namespace std;
 
 int main() {
-    string s = "I like Java";
+    string s1 = "apple";
+    string s2 = "apple";
+    string s3 = "banana";
 
-    s.replace(7, 4, "C++");
-
-    cout << s << endl;
+    cout << s1.compare(s2) << endl;
+    cout << s3.compare(s1) << endl;
 
     return 0;
 }
