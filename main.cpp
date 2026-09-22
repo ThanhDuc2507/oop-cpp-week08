@@ -7,9 +7,9 @@ void insertSubarray(vector<int>& arr, const vector<int>& sub, int index) {
 }
 
 int main() {
-    vector<int> nums = {1, 2, 3, 4, 5};
-    vector<int> sub = {9, 9};
-    int pos = 2;
+    vector<int> nums = {10, 20, 30};
+    vector<int> sub = {7, 8, 9};
+    int pos = 1;
 
     insertSubarray(nums, sub, pos);
 
