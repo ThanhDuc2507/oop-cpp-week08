@@ -1,21 +1,20 @@
 #include <iostream>
 #include <string>
-#include <cctype>
 using namespace std;
 
 int main() {
-    string name;
-    getline(cin, name);
+    string sentence, word;
 
-    cout << "Initials: ";
+    getline(cin, sentence);
+    getline(cin, word);
 
-    for (int i = 0; i < name.length(); i++) {
-        if (i == 0 || name[i - 1] == ' ') {
-            cout << (char)toupper(name[i]) << ".";
-        }
+    size_t pos = sentence.find(word);
+
+    if (pos != string::npos) {
+        cout << "The word \"" << word << "\" is found at position " << pos << "." << endl;
+    } else {
+        cout << "The word \"" << word << "\" is not found." << endl;
     }
-
-    cout << endl;
 
     return 0;
 }
