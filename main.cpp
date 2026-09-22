@@ -1,13 +1,13 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main() {
-    string text = "Computer Science";
-
-    string result = text.substr(9, 7);
-
-    cout << result << endl;
-
+    int x = 10;
+    int& rx = x;
+    rx = 20;
+    
+    cout << "x = " << x << endl;
+    cout << "rx = " << rx << endl;
+    
     return 0;
 }
