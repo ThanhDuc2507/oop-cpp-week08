@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-    string s = "Hello";
+    string s = "Hello World";
 
-    s.append(" C++");
+    s.insert(5, ", C++");
 
     cout << s << endl;
 
