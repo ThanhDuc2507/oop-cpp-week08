@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-    string s = "Hello World";
+    string s = "I like Java";
 
-    s.erase(5, 6);
+    s.replace(7, 4, "C++");
 
     cout << s << endl;
 
