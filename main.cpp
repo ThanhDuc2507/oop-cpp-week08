@@ -3,12 +3,19 @@
 using namespace std;
 
 int main() {
-    string s1 = "apple";
-    string s2 = "apple";
-    string s3 = "banana";
+    string name, id, email, hometown;
 
-    cout << s1.compare(s2) << endl;
-    cout << s3.compare(s1) << endl;
+    getline(cin, name);
+    getline(cin, id);
+    getline(cin, email);
+    getline(cin, hometown);
+
+    cout << "===== STUDENT PROFILE =====" << endl;
+    cout << "Full name   : " << name << endl;
+    cout << "Student ID  : " << id << endl;
+    cout << "Email       : " << email << endl;
+    cout << "Hometown    : " << hometown << endl;
+    cout << "===========================" << endl;
 
     return 0;
 }
