@@ -2,16 +2,13 @@
 #include <string>
 using namespace std;
 
-void swapStr(string& a, string& b) {
-    string temp = a;
-    a = b;
-    b = temp;
+void changeFirstChar(string& str) {
+    str[0] = 'J';
 }
 
 int main() {
-    string x = "cat";
-    string y = "dog";
-    swapStr(x, y);
-    cout << x << " " << y << endl;
+    string name = "python";
+    changeFirstChar(name);
+    cout << name << endl;
     return 0;
 }
