@@ -2,10 +2,10 @@
 using namespace std;
 
 int main() {
-    int a = 5;
-    int& r = a;
-    r = 10;
-    cout << a << endl;
-    cout << r << endl;
+    int x = 3;
+    int& y = x;
+    x = 7;
+    y = 2;
+    cout << x << " " << y << endl;
     return 0;
 }
