@@ -1,10 +1,13 @@
 #include <iostream>
 using namespace std;
 
+void addFive(int& x) {
+    x += 5;
+}
+
 int main() {
-    int n = 7;
-    int& r = n;
-    r = 15;
-    cout << n << " " << r << endl;
+    int a = 10;
+    addFive(a);
+    cout << a << endl;
     return 0;
 }
