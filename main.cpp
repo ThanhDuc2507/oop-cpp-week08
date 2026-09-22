@@ -3,16 +3,19 @@
 using namespace std;
 
 int main() {
-    string text = "I love C++ programming";
-    string sub = "C++";
+    string text = "Hello C++";
 
-    size_t pos = text.find(sub);
+    int countAll = text.length();
+    int countWithoutSpaces = 0;
 
-    if (pos != string::npos) {
-        cout << "Position: " << pos << endl;
-    } else {
-        cout << "Not found" << endl;
+    for (char c : text) {
+        if (c != ' ') {
+            countWithoutSpaces++;
+        }
     }
+
+    cout << countAll << endl;
+    cout << countWithoutSpaces << endl;
 
     return 0;
 }
