@@ -1,19 +1,23 @@
 #include <iostream>
 using namespace std;
 
-void changeValue(int x) {
-    x = 100;
+void setFirstToZero(int arr[]) {
+    arr[0] = 0;
 }
 
-void changeRef(int& x) {
-    x = 200;
+void incrementAll(int (&arr)[4]) {
+    for (int i = 0; i < 4; ++i) {
+        arr[i] += 1;
+    }
 }
 
 int main() {
-    int a = 5;
-    changeValue(a);
-    cout << "After changeValue: " << a << endl;
-    changeRef(a);
-    cout << "After changeRef: " << a << endl;
+    int nums[4] = {1, 2, 3, 4};
+    setFirstToZero(nums);
+    incrementAll(nums);
+    
+    cout << nums[0] << " " << nums[1] << " "
+         << nums[2] << " " << nums[3] << endl;
+         
     return 0;
 }
