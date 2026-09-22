@@ -3,28 +3,12 @@
 using namespace std;
 
 int main() {
-    string name;
-    int year;
+    string s = "Hello World!";
+    string insertText = "C++ ";
 
-    getline(cin, name);
-    cin >> year;
+    s.insert(6, insertText);
 
-    string username = name;
-
-    for (int i = 0; i < username.length(); i++) {
-        if (username[i] == ' ') {
-            username.erase(i, 1);
-            i--;
-        }
-    }
-
-    for (int i = 0; i < username.length(); i++) {
-        username[i] = tolower(username[i]);
-    }
-
-    username += to_string(year);
-
-    cout << "Username: " << username << endl;
+    cout << s << endl;
 
     return 0;
 }
