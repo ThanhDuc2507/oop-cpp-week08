@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     string s = "Hello World";
 
-    s.insert(5, ", C++");
+    s.erase(5, 6);
 
     cout << s << endl;
 
