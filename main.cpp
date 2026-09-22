@@ -1,23 +1,18 @@
 #include <iostream>
 using namespace std;
 
-void setFirstToZero(int arr[]) {
-    arr[0] = 0;
-}
-
-void incrementAll(int (&arr)[4]) {
-    for (int i = 0; i < 4; ++i) {
-        arr[i] += 1;
-    }
+void setLastToTen(int& x) {
+    x = 10;
 }
 
 int main() {
-    int nums[4] = {1, 2, 3, 4};
-    setFirstToZero(nums);
-    incrementAll(nums);
+    int nums[4] = {3, 5, 7, 9};
+    setLastToTen(nums[3]);
     
-    cout << nums[0] << " " << nums[1] << " "
-         << nums[2] << " " << nums[3] << endl;
-         
+    for (int i = 0; i < 4; ++i) {
+        cout << nums[i] << " ";
+    }
+    cout << endl;
+    
     return 0;
 }
