@@ -1,13 +1,15 @@
 #include <iostream>
 using namespace std;
 
-void addFive(int& x) {
-    x += 5;
+void swapValues(int& x, int& y) {
+    int temp = x;
+    x = y;
+    y = temp;
 }
 
 int main() {
-    int a = 10;
-    addFive(a);
-    cout << a << endl;
+    int a = 4, b = 9;
+    swapValues(a, b);
+    cout << a << " " << b << endl;
     return 0;
 }
