@@ -3,11 +3,11 @@
 using namespace std;
 
 int main() {
-    string text = "I like Java";
+    string text = "Computer Science";
 
-    text.replace(7, 4, "C++");
+    string result = text.substr(9, 7);
 
-    cout << text << endl;
+    cout << result << endl;
 
     return 0;
 }
