@@ -2,11 +2,13 @@
 #include <string>
 using namespace std;
 
+void addExclaim(string& str) {
+    str += "!!";
+}
+
 int main() {
-    string s = "Hello";
-    string& r = s;
-    r += " World";
-    cout << s << endl;
-    cout << r << endl;
+    string msg = "Good Day";
+    addExclaim(msg);
+    cout << msg << endl;
     return 0;
 }
